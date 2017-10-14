@@ -254,8 +254,8 @@ Setting up Tensorflow for data parallel work
     parser.add_argument('--job-name', default="worker", help='worker or ps')
     parser.add_argument('--num-workers', default=1, type=int, help='Number of workers')
     parser.add_argument('--num-ps', type=int, default=1, help="Number of parameter servers")
-    parser.add_argument('--log', default="/tmp/pong", help='Log directory path')
-    parser.add_argument('--env-id', default="PongDeterministic-v3", help='Environment id')
+    parser.add_argument('--log', default="/tmp/vpn", help='Log directory path')
+    parser.add_argument('--env-id', default="maze", help='Environment id')
     parser.add_argument('-r', '--remotes', default=None,
                         help='References to environments to create (e.g. -r 20), '
                              'or the address of pre-existing VNC servers and '
@@ -266,14 +266,15 @@ Setting up Tensorflow for data parallel work
     parser.add_argument('--eval-num', type=int, default=500, help="Evaluation frequency")
     parser.add_argument('--eval-epoch', type=int, default=0, help="Evaluation epoch")
     parser.add_argument('--seed', type=int, default=0, help="Random seed")
-    parser.add_argument('--config', type=str, default="", help="config xml file for environment")
+    parser.add_argument('--config', type=str, default="config/collect_deterministic.xml", 
+            help="config xml file for environment")
 
     # Hyperparameters
-    parser.add_argument('-n', '--t-max', type=int, default=20, help="Number of unrolling steps")
+    parser.add_argument('-n', '--t-max', type=int, default=10, help="Number of unrolling steps")
     parser.add_argument('-g', '--gamma', type=float, default=0.98, help="Discount factor")
     parser.add_argument('-ld', '--ld', type=float, default=1, help="Lambda for GAE")
     parser.add_argument('-lr', '--lr', type=float, default=1e-4, help="Learning rate")
-    parser.add_argument('--decay', type=float, default=1, help="Learning rate")
+    parser.add_argument('--decay', type=float, default=0.95, help="Learning decay")
     parser.add_argument('-ms', '--max-step', type=int, default=int(15e6), help="Max global step")
     parser.add_argument('--dim', type=int, default=0, help="Number of final hidden units")
     parser.add_argument('--f-num', type=str, default='32,32,64', help="num of conv filters")

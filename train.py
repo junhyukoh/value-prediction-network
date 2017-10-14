@@ -13,7 +13,7 @@ parser.add_argument('-r', '--remotes', default=None,
                     '(e.g. -r vnc://localhost:5900+15900,vnc://localhost:5901+15901).')
 parser.add_argument('-e', '--env-id', type=str, default="maze",
                     help="Environment id")
-parser.add_argument('-l', '--log', type=str, default="result/maze", 
+parser.add_argument('-l', '--log', type=str, default="/tmp/vpn", 
                     help="Log directory path")
 parser.add_argument('-d', '--dry-run', action='store_true',
                     help="Print out commands rather than executing them")
