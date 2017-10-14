@@ -1,0 +1,5 @@
+<maze size=10 time=20 holes=5 />
+<object num_goal=8 />
+<reward default=-0.2 success=2.0 lazy=-0.5 goal=2.0 />
+<random p_stop=0.0 p_slip=0.0 p_goal=0.0 />
+<meta remaining_time=1 />
