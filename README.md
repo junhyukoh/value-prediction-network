@@ -1,7 +1,7 @@
 # Introduction
 This repository implements **NIPS 2017 Value Prediction Network (Oh et al.)** in Tensorflow.
 ```
-@inproceedings{Oh2016ControlOM,
+@inproceedings{Oh2017VPN,
   title={Value Prediction Network},
   author={Junhyuk Oh and Satinder Singh and Honglak Lee},
   booktitle={NIPS},
