@@ -1,5 +1,5 @@
 # Introduction
-This repository implements **NIPS 2017 Value Prediction Network (Oh et al.)** in Tensorflow.
+This repository implements **[NIPS 2017 Value Prediction Network (Oh et al.)](https://arxiv.org/abs/1707.03497)** in Tensorflow.
 ```
 @inproceedings{Oh2017VPN,
   title={Value Prediction Network},
