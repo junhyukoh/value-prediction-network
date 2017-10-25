@@ -32,4 +32,5 @@ python train.py --config config/collect_deterministic.xml --branch 4,4,4 --alg V
 `train_vpn` script contains commands for reproducing the main result of the paper.
 
 # Notes
+* Tensorboard shows the performance of the epsilon-greedy policy. This is NOT the learning curve in the paper, because epsilon decreases from 1.0 to 0.05 for the first 1e6 steps. Instead, `[logdir]/eval.csv` shows the performance of the agent using greedy-policy.
 * Our code supports multi-gpu training. You can specify GPU IDs in `--gpu` option (e.g., `--gpu 0,1,2,3`). 
