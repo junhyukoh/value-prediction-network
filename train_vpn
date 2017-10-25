@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Deterministic Collect
-# python train.py --config config/collect_deterministic.xml --branch 4 --decay 0.9 --alg VPN --log result/vpn1 ${@:1} 
-# python train.py --config config/collect_deterministic.xml --branch 4,4 --decay 0.9 --alg VPN --log result/vpn2 ${@:1} 
-# python train.py --config config/collect_deterministic.xml --branch 4,4,4 --decay 0.9 --alg VPN --log result/vpn3 ${@:1} 
-# python train.py --config config/collect_deterministic.xml --branch 4,4,4,1,1 --decay 0.8 --alg VPN --log result/vpn5 ${@:1} 
+# python train.py --config config/collect_deterministic.xml --prediction-step 1 --branch 4 --decay 0.9 --alg VPN --log result/vpn1 ${@:1} 
+# python train.py --config config/collect_deterministic.xml --prediction-step 2 --branch 4,4 --decay 0.9 --alg VPN --log result/vpn2 ${@:1} 
+# python train.py --config config/collect_deterministic.xml --prediction-step 3 --branch 4,4,4 --decay 0.9 --alg VPN --log result/vpn3 ${@:1} 
+# python train.py --config config/collect_deterministic.xml --prediction-step 5 --branch 4,4,4,1,1 --decay 0.8 --alg VPN --log result/vpn5 ${@:1} 
 
 # Stochastic Collect
-# python train.py --config config/collect_stochastic.xml --branch 4 --decay 0.9 --alg VPN --log result/vpn1 ${@:1}  
-# python train.py --config config/collect_stochastic.xml --branch 4,4 --decay 0.9 --alg VPN --log result/vpn2 ${@:1} 
-# python train.py --config config/collect_stochastic.xml --branch 4,4,4 --decay 0.9 --alg VPN --log result/vpn3 ${@:1} 
-# python train.py --config config/collect_stochastic.xml --branch 4,4,4,1,1 --decay 0.8 --alg VPN --log result/vpn5 ${@:1} 
+# python train.py --config config/collect_stochastic.xml --prediction-step 1 --branch 4 --decay 0.9 --alg VPN --log result/vpn1 ${@:1}  
+# python train.py --config config/collect_stochastic.xml --prediction-step 2 --branch 4,4 --decay 0.9 --alg VPN --log result/vpn2 ${@:1} 
+# python train.py --config config/collect_stochastic.xml --prediction-step 3 --branch 4,4,4 --decay 0.9 --alg VPN --log result/vpn3 ${@:1} 
+# python train.py --config config/collect_stochastic.xml --prediction-step 5 --branch 4,4,4,1,1 --decay 0.8 --alg VPN --log result/vpn5 ${@:1} 
