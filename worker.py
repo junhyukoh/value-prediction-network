@@ -139,7 +139,6 @@ More tensorflow setup for data parallelism
     return cluster
 
 def evaluate(env, network, num_play=3000, eps=0.0):
-    idx = 0
     for iter in range(0, num_play):
         last_state = env.reset()
         last_features = network.get_initial_features()
@@ -162,7 +161,6 @@ def evaluate(env, network, num_play=3000, eps=0.0):
             last_state = state
             last_features = features
             last_meta = env.meta()
-            idx = idx + 1
 
             if terminal:
                 break
