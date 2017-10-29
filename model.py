@@ -472,7 +472,8 @@ class CNN(Model):
         for i in range(len(self.f_num)):
             x = act_fn(conv2d(x, self.f_num[i], "l{}".format(i+1), 
                         [self.f_size[i], self.f_size[i]], 
-                        [self.f_stride[i], self.f_stride[i]], pad=self.f_pad))
+                        [self.f_stride[i], self.f_stride[i]], pad=self.f_pad, 
+                        init="he"))
             self.conv = x
         if meta is not None:
             space_dim = x.get_shape().as_list()[1:3]
