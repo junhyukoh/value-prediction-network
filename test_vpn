@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ -z "$1" ]
+  then echo "[checkpoint]"; exit 0
+fi
+
+args="--config config/collect_deterministic.xml --branch 4,4,4,1,1 --checkpoint $1 --gpu 1 ${@:2}"
+echo $args
+CUDA_VISIBLE_DEVICES=$3 python test.py $args
